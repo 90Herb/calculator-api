@@ -36,7 +36,7 @@ ns soap http://schemas.xmlsoap.org/soap/envelope
     body: {
         soap#Fault: {
             faultcode: "soap:Server",
-            faultstring: "Operation [add:\soapkit-config] not implemented"
+            faultstring: "Operation [add:\soapkit-config] not implemented 100%"
         }
     } write "application/xml"
 }]]></ee:set-payload>
