@@ -29,6 +29,29 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+					<cloudhub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<environment>dev</environment>
+						<target>Cloudhub-US-East-2</target>
+						<muleVersion>4.9.0</muleVersion>
+						<username>Mule4Herbet</username>
+						<password>Mulesoft@2026!.</password>
+						<applicationName>soap-consume</applicationName>
+						<replicas>1</replicas>
+						<vCores>1</vCores>
+						<deploymentSettings>
+							<http>
+								<inbound>
+									<publicUrl>https://soap-consume-ch2.us-e1.cloudhub.io</publicUrl>
+									<forwardSslSession>true</forwardSslSession>
+									<lastMileSecurity>true</lastMileSecurity>
+								</inbound>
+							</http>
+						</deploymentSettings>
+					</cloudhub2Deployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
